@@ -25,6 +25,8 @@ public class S3Service {
     }
 
     public void downloadFile(String bucketName, String key, String downloadFilePath) {
+
+
         s3Client.getObject(GetObjectRequest.builder().bucket(bucketName).key(key).build(), Paths.get(downloadFilePath));
     }
 
